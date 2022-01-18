@@ -13,13 +13,14 @@ app.get('/', (req, res) =>{
         res.send('HELLO WORLD')
 })
 app.post('/enviaTextoDecode', async (req, res) =>{
-        await decodify.decodeOrCode(req, res, 'decode')
+         decodify.decodeOrCode(req, res, 'decode')
+         console.log(res.statusMessage)
 })
 app.post('/enviaTextoEncode', async (req, res) =>{
-        await decodify.decodeOrCode(req, res, 'encode')
+         decodify.decodeOrCode(req, res, 'encode')
 })
-app.get('/retornaCodigos', async (req, res) =>{
-        await decodify.decodeOrCode(req, res, 'getCode')
+app.get('/retornaCodigos',  (req, res) =>{
+         decodify.decodeOrCode(req, res, 'getCode')
 
 })
  
