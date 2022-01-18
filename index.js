@@ -9,6 +9,9 @@ app.use(require("cors")())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
+app.get('/', (req, res) =>{
+        res.send('HELLO WORLD')
+})
 app.post('/enviaTextoDecode', (req, res) =>{
     
         decodify.decodeOrCode(req, res, 'decode')
