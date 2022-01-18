@@ -13,8 +13,8 @@ app.get('/', (req, res) =>{
         res.send('HELLO WORLD')
 })
 app.post('/enviaTextoDecode', async (req, res) =>{
-         decodify.decodeOrCode(req, res, 'decode')
-         console.log(res.statusMessage)
+        decodify.decodeOrCode(req, res, 'decode')
+        console.log('OK')
 })
 app.post('/enviaTextoEncode', async (req, res) =>{
          decodify.decodeOrCode(req, res, 'encode')
