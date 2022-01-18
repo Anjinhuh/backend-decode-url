@@ -12,14 +12,14 @@ app.use(bodyParser.json())
 app.get('/', (req, res) =>{
         res.send('HELLO WORLD')
 })
-app.post('/enviaTextoDecode', (req, res) =>{
-        decodify.decodeOrCode(req, res, 'decode')
+app.post('/enviaTextoDecode', async (req, res) =>{
+        await decodify.decodeOrCode(req, res, 'decode')
 })
-app.post('/enviaTextoEncode', (req, res) =>{
-        decodify.decodeOrCode(req, res, 'encode')
+app.post('/enviaTextoEncode', async (req, res) =>{
+        await decodify.decodeOrCode(req, res, 'encode')
 })
-app.get('/retornaCodigos', (req, res) =>{
-        decodify.decodeOrCode(req, res, 'getCode')
+app.get('/retornaCodigos', async (req, res) =>{
+        await decodify.decodeOrCode(req, res, 'getCode')
 
 })
  
