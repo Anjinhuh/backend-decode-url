@@ -42,12 +42,12 @@ module.exports = {
             
             
                 if(i === 0){
-                    let replacado = textoInicial.replace( strCodigoReplace, strCodigo )
+                    let replacado = textoInicial.replace( /String(strCodigoReplace)/g, strCodigo )
                     replaceString.push(replacado)
                 } else{
                     let str = String(replaceString[0])
                     replaceString.pop()
-                    let remarquei = str.replace( strCodigoReplace, strCodigo )
+                    let remarquei = str.replace( /String(strCodigoReplace)/g, strCodigo )
                     replaceString.push(remarquei)
                 }
             
