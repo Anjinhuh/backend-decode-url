@@ -47,7 +47,7 @@ module.exports = {
                 } else{
                     let str = String(replaceString[0])
                     replaceString.pop()
-                    let remarquei = str.replaceAll( strCodigoReplace, strCodigo )
+                    let remarquei = str.replace( strCodigoReplace, strCodigo )
                     replaceString.push(remarquei)
                 }
             
@@ -67,7 +67,7 @@ module.exports = {
                 } else{
                     let str = String(replaceString[0])
                     replaceString.pop()
-                    let remarquei = str.replaceAll( strCodigoReplace, strCodigo )
+                    let remarquei = str.replace( strCodigoReplace, strCodigo )
                     replaceString.push(remarquei)
                 }
             
