@@ -1,7 +1,7 @@
 
 
 module.exports = {
-    decodeOrCode(req, res, mode){
+    async decodeOrCode(req, res, mode){
         var arrList= [
             { codigo: '%'  ,	codigoReplace: '%25'},
             { codigo: ' '  ,    codigoReplace: '%20'},
@@ -52,7 +52,7 @@ module.exports = {
                 }
             
             }
-            res.send(String(replaceString))
+           await res.send(String(replaceString))
         } else if(mode === 'encode'){
             let replaceString = []
             for(var y=0; y < arrList.length; y++) {
@@ -72,7 +72,7 @@ module.exports = {
                 }
             
             }
-            res.send(String(replaceString))
+            await res.send(String(replaceString))
         } else if(mode === 'getCode'){
             let arr = []
             let arr2 = []
@@ -98,7 +98,7 @@ module.exports = {
                 }
                 
             }
-            res.send({arr, arr2})
+            await res.send({arr, arr2})
             
 
         }

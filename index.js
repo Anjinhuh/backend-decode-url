@@ -13,9 +13,7 @@ app.get('/', (req, res) =>{
         res.send('HELLO WORLD')
 })
 app.post('/enviaTextoDecode', (req, res) =>{
-    
         decodify.decodeOrCode(req, res, 'decode')
-        
 })
 app.post('/enviaTextoEncode', (req, res) =>{
         decodify.decodeOrCode(req, res, 'encode')
