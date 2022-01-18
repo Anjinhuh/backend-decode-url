@@ -21,8 +21,6 @@ app.post('/enviaTextoEncode', async (req, res) =>{
 })
 app.get('/retornaCodigos',  (req, res) =>{
          decodify.decodeOrCode(req, res, 'getCode')
-        console.log('OK')
-
 
 })
  

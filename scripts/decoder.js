@@ -42,7 +42,7 @@ module.exports = {
             
             
                 if(i === 0){
-                    let replacado = textoInicial.replaceAll( strCodigoReplace, strCodigo )
+                    let replacado = textoInicial.replace( strCodigoReplace, strCodigo )
                     replaceString.push(replacado)
                 } else{
                     let str = String(replaceString[0])
@@ -62,7 +62,7 @@ module.exports = {
             
             
                 if(y === 0){
-                    let replacado = textoInicial.replaceAll( strCodigoReplace, strCodigo )
+                    let replacado = textoInicial.replace( strCodigoReplace, strCodigo )
                     replaceString.push(replacado)
                 } else{
                     let str = String(replaceString[0])
